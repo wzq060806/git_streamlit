@@ -1,28 +1,55 @@
-# 上层虚拟环境文件夹（因为你的 git 建在 venv 里面）
-../Lib/
-../Scripts/
-../Include/
-../pyvenv.cfg
+# 忽略根目录下的虚拟环境（关键：因为 .venv 和 git_streamlit 同级）
+/.venv/
+/venv/
+/env/
+/ENV/
 
-# Python 编译缓存
+# Python 缓存文件
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 *.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-# 日志与临时文件
-*.log
-*.tmp
-*.cache
-
-# 编辑器配置
-.vscode/
+# PyCharm / IDE 配置文件（你用 PyCharm，必须忽略）
 .idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
 *.swp
 *.swo
 *~
 
-# Windows 系统垃圾文件
+# Windows 系统文件
 Thumbs.db
 Desktop.ini
+$RECYCLE.BIN/
+*.bat
+*.cmd
+*.exe
+*.lnk
+
+# 日志与缓存
+*.log
+*.tmp
+*.cache
+.env
+.env.local
+.env.*.local
