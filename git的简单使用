@@ -1,0 +1,36 @@
+# ==================== 一、初始化 Git（仅第一次）（已经完成） ====================
+cd C:\Users\Administrator\PyCharmMiscProject\Python
+git init
+git config user.name "你的GitHub用户名"
+git config user.email "你的GitHub邮箱"
+
+# --------------------------------------------------------------------
+
+# ==================== 二、提交文件到本地 ====================
+git status （查看状态）
+git add python_streamlit007_04.py  （拉出来）
+git commit -m "04.py v1.0 正式版"      （拍照）
+git log --oneline   （看历史记录）
+
+# --------------------------------------------------------------------
+
+# ==================== 三、推送到 GitHub ====================
+####git remote add origin https://github.com/你的用户名/你的仓库名.git     （已经完成，把happy文件夹绑定到仓库了，以后不用写）
+####git push -u origin master          （第一次就写这个，我们已经写过了以后不写这个，写下面那个）
+git push   （将本地的happy文件更新到Github仓库上）
+# --------------------------------------------------------------------
+
+# ==================== 四、以后更新代码（固定流程） （主要是这个） ====================
+git status
+git add python_streamlit007_04.py  （文件名写自己的）
+git commit -m "更新内容"
+git push
+
+# --------------------------------------------------------------------
+
+# ==================== 五、常用查看/恢复命令 ====================
+git show 哈希值:python_streamlit007_04.py  （哈希值用git log --oneline  看）  查看
+git diff 哈希值 python_streamlit007_04.py                                  对比差异
+git checkout 哈希值 -- python_streamlit007_04.py                           回溯到对应哈希值版本的文件
+
+终端中查看发现退不了的时候，按“q”可以退出查看器
